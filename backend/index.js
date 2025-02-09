@@ -7,7 +7,7 @@ const cors = require("cors");
 const app = express();
 
 mongoose.set("strictQuery", true);
-mongoose.connect("mongodb+srv://jayp_mishra:1234mish@cluster0.7eeb128.mongodb.net/emsdb");
+mongoose.connect("mongodb+srv://Charu:Charu%402004@cluster1.avml2.mongodb.net/AC?retryWrites=true&w=majority&appName=Cluster1");
 var db = mongoose.connection;
 db.on("open", () => console.log("Connected to DB"));
 db.on("error", () => console.log("Error occurred"));
@@ -20,3 +20,8 @@ app.use('/eventRoute', eventRoute);
 app.listen(4000, () => {
     console.log("Server started at 4000");
 })
+
+
+//mongodb+srv://Charu:Charu%402004@cluster1.avml2.mongodb.net/AC?retryWrites=true&w=majority&appName=Cluster1
+
+//mongodb+srv://jayp_mishra:1234mish@cluster0.7eeb128.mongodb.net/emsdb
